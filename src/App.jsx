@@ -2,6 +2,8 @@ import "./assets/stylesheets/index.css"
 import React, { useState } from 'react'
 import { Navbar } from "./components/navbar"
 import { CurrentWeather } from "./components/currentWeather"
+import { DailyForecasts } from "./components/dailyForecasts"
+
 
 const App = () => {
   const [locationKey, setLocationKey] = useState("")
@@ -11,6 +13,7 @@ const App = () => {
     <div>
       <Navbar setLocationKey={setLocationKey} />
       <CurrentWeather locationKey={locationKey} />
+      <DailyForecasts locationKey={locationKey} />
     </div>
   )
 }
